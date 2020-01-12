@@ -1,0 +1,38 @@
+{
+  "name": "games-list",
+  "version": "1.0.0",
+  "description": "A codebase for a PERN stack app.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "npm start --prefix client",
+    "server": "nodemon server",
+    "start": "node server",
+    "jelastic-postbuild": "cd client && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gwenaelschopfer/games-list.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Gwenaël Schopfer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gwenaelschopfer/games-list/issues"
+  },
+  "homepage": "https://github.com/gwenaelschopfer/games-list#readme",
+  "devDependencies": {
+    "concurrently": "^5.0.2",
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "pg": "^7.17.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5"
+  }
+}
