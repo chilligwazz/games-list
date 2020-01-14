@@ -1,6 +1,8 @@
 var { Pool } = require('pg');
 
-const CONNECTION_STRING = process.env.DATABASE_URL || 'postgresql://postgres:taXiway-3lision-ambrosi@@localhost:5432/gameslist-db';
+require('dotenv').config();
+
+const CONNECTION_STRING = process.env.DATABASE_URL;
 const SSL = process.env.NODE_ENV === 'production';
 
 class Database {
